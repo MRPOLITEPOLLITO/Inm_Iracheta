@@ -1,0 +1,125 @@
+
+
+/*--------------------------------------------------------------
+# slider Section
+--------------------------------------------------------------*/
+#slider {
+  width: 100%;
+  height: 80vh;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-height: 500px) {
+  #slider {
+    height: 150vh;
+  }
+}
+#slider .carousel, #slider .carousel-inner, #slider .carousel-item, #slider .carousel-item::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#slider .carousel-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#slider .carousel-item::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#slider .carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 70px;
+  left: 50px;
+  right: 50px;
+}
+#slider .container {
+  text-align: center;
+}
+#slider h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  #slider h2 {
+    font-size: 28px;
+  }
+}
+#slider p {
+  width: 80%;
+  margin: 0 auto 30px auto;
+  color: #fff;
+}
+@media (min-width: 1024px) {
+  #slider p {
+    width: 60%;
+  }
+}
+#slider .carousel-fade {
+  overflow: hidden;
+}
+#slider .carousel-fade .carousel-inner .carousel-item {
+  transition-property: opacity;
+}
+#slider .carousel-fade .carousel-inner .carousel-item,
+#slider .carousel-fade .carousel-inner .active.carousel-item-start,
+#slider .carousel-fade .carousel-inner .active.carousel-item-end {
+  opacity: 0;
+}
+#slider .carousel-fade .carousel-inner .active,
+#slider .carousel-fade .carousel-inner .carousel-item-next.carousel-item-start,
+#slider .carousel-fade .carousel-inner .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transition: 0.5s;
+}
+#slider .carousel-fade .carousel-inner .carousel-item-next,
+#slider .carousel-fade .carousel-inner .carousel-item-prev,
+#slider .carousel-fade .carousel-inner .active.carousel-item-start,
+#slider .carousel-fade .carousel-inner .active.carousel-item-end {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+#slider .carousel-control-prev, #slider .carousel-control-next {
+  width: 10%;
+}
+@media (min-width: 1024px) {
+  #slider .carousel-control-prev, #slider .carousel-control-next {
+    width: 5%;
+  }
+}
+#slider .carousel-control-next-icon, #slider .carousel-control-prev-icon {
+  background: none;
+  font-size: 32px;
+  line-height: 1;
+}
+#slider .carousel-indicators li {
+  cursor: pointer;
+}
+#slider .btn-get-started {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+  background: #18d26e;
+}
+#slider .btn-get-started:hover {
+  background: #fff;
+  color: #18d26e;
+}
+
